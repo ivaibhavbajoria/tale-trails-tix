@@ -764,6 +764,3 @@ function SectionHead({
     </motion.div>
   );
 }
-    </div>
-  );
-}
