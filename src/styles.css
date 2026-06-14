@@ -7,8 +7,8 @@
 /*
  * Tix to Trails N Tales — cinematic travel storytelling design system.
  * Palette: midnight blue, deep forest green, sand beige, sunset orange, warm gold, cloud white.
+ * Fonts (Fraunces + Inter) are loaded via <link> in src/routes/__root.tsx.
  */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
