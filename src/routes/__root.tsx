@@ -78,14 +78,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Tix to Trails N Tales — Cinematic Travel Journal" },
-      { name: "description", content: "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world." },
+      {
+        name: "description",
+        content:
+          "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world.",
+      },
       { property: "og:site_name", content: "Tix to Trails N Tales" },
       { property: "og:title", content: "Tix to Trails N Tales — Cinematic Travel Journal" },
-      { property: "og:description", content: "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world." },
+      {
+        property: "og:description",
+        content:
+          "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Tix to Trails N Tales — Cinematic Travel Journal" },
-      { name: "twitter:description", content: "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world." },
+      {
+        name: "twitter:description",
+        content:
+          "A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world.",
+      },
     ],
     links: [
       {
@@ -96,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;700&family=Mr+De+Haviland&display=swap",
       },
     ],
   }),
