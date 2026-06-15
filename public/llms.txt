@@ -1,0 +1,9 @@
+# Tix to Trails N Tales
+
+> A cinematic travel journal of tickets, trails and tales — destinations, stories and routes from around the world.
+
+Tix to Trails N Tales is a wandering field-notebook: part travel diary, part love letter to the strangers, sunsets and silent mornings that turn a place into a memory. The site features featured journeys, an animated trails map, long-form tales, and an Instagram-style gallery.
+
+## Pages
+
+- [Home](/): Featured destinations, brand story, trails map, tales and gallery.

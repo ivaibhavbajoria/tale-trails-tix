@@ -26,7 +26,9 @@ export const Route = createFileRoute("/")({
         content: "Tickets. Trails. Tales. A cinematic travel storytelling journal.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://tale-trails-tix.lovable.app/" },
     ],
+    links: [{ rel: "canonical", href: "https://tale-trails-tix.lovable.app/" }],
   }),
   component: Index,
 });
@@ -95,14 +97,14 @@ const tales = [
 ];
 
 const gallery = [
-  destSantorini,
-  destBali,
-  destHimalayas,
-  destKyoto,
-  destIceland,
-  destSahara,
-  destBali,
-  destSantorini,
+  { src: destSantorini, alt: "Whitewashed Santorini cliffs glowing at sunset over the Aegean Sea" },
+  { src: destBali, alt: "Emerald rice terraces stitched across the hills of Ubud, Bali" },
+  { src: destHimalayas, alt: "Snow-capped Himalayan peaks rising above drifting clouds in Nepal" },
+  { src: destKyoto, alt: "Towering bamboo grove of Arashiyama on the outskirts of Kyoto" },
+  { src: destIceland, alt: "Drifting blue icebergs at Jökulsárlón glacier lagoon in Iceland" },
+  { src: destSahara, alt: "Wind-sculpted golden dunes of the Sahara desert in Morocco" },
+  { src: destBali, alt: "Morning light on terraced fields in Bali" },
+  { src: destSantorini, alt: "Cobalt domes and white cubes of a Santorini village at dusk" },
 ];
 
 function Index() {
@@ -198,6 +200,9 @@ function Hero() {
         </motion.span>
 
         <h1 className="font-display text-6xl leading-[0.95] sm:text-7xl md:text-8xl lg:text-[9rem]">
+          <span className="sr-only">
+            Tix to Trails N Tales — a cinematic travel journal of tickets, trails and tales.
+          </span>
           <SplitWord text="Tickets." delay={0.1} className="text-cloud" />
           <SplitWord text="Trails." delay={0.35} className="text-headline italic" />
           <SplitWord text="Tales." delay={0.6} className="text-cloud" />
@@ -637,7 +642,7 @@ function InstagramGallery() {
         />
 
         <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {gallery.map((src, i) => (
+          {gallery.map((item, i) => (
             <motion.a
               key={i}
               href="https://instagram.com/tixtotrailsntales"
@@ -651,8 +656,8 @@ function InstagramGallery() {
               className="group relative aspect-square overflow-hidden rounded-xl border border-white/10 shadow-card"
             >
               <img
-                src={src}
-                alt={`Instagram post ${i + 1}`}
+                src={item.src}
+                alt={item.alt}
                 width={600}
                 height={600}
                 loading="lazy"
