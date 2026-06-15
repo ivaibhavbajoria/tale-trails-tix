@@ -468,7 +468,7 @@ function Hero() {
         </div>
 
         {/* Hero Right Collage with 3D Parallax */}
-        <div className="lg:col-span-6 relative flex h-[620px] w-full items-end justify-center lg:justify-end -translate-y-4 lg:translate-y-8">
+        <div className="lg:col-span-6 relative flex h-[680px] w-full items-end justify-center lg:justify-end -translate-y-4 lg:translate-y-8">
           <motion.div
             style={{
               rotateX: coords.y * 12,
@@ -476,7 +476,7 @@ function Hero() {
               transformStyle: "preserve-3d",
             }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="relative z-10 w-full max-w-[500px] cursor-pointer"
+            className="relative z-10 w-full max-w-[580px] cursor-pointer"
           >
             <img
               src={processedCollage}
