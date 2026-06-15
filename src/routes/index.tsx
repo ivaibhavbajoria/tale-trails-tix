@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 import heroMountains from "@/assets/hero-mountains.jpg";
-import heroCollage from "@/assets/hero-collage.jpg";
+import heroCollage from "@/assets/hero-collage.png";
 import journal from "@/assets/journal.jpg";
 import storyBg from "@/assets/story-bg.png";
 import storiesBg from "@/assets/stories-bg.jpg";
