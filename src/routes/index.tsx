@@ -468,7 +468,7 @@ function Hero() {
         </div>
 
         {/* Hero Right Collage with 3D Parallax */}
-        <div className="lg:col-span-6 relative flex h-[680px] w-full items-end justify-center lg:justify-end -translate-y-4 lg:translate-y-8">
+        <div className="lg:col-span-6 relative flex h-[680px] w-full items-end justify-center lg:justify-end translate-y-6 lg:translate-y-24">
           <motion.div
             style={{
               rotateX: coords.y * 12,
