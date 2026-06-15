@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { NavBar, MobileMenu } from "../components/NavBar";
@@ -1285,9 +1285,9 @@ function Footer() {
 
           {/* Legal navigation */}
           <div className="flex gap-6 text-[11px] uppercase tracking-widest text-[#fbf7ee]/60 font-sans font-medium">
-            <a href="#" className="hover:text-gold transition">
+            <Link to="/privacy" className="hover:text-gold transition">
               Privacy Policy
-            </a>
+            </Link>
             <a href="#" className="hover:text-gold transition">
               Terms of Use
             </a>

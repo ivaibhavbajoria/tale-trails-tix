@@ -14,7 +14,13 @@ export function NavBar({ onMenuToggle }: NavBarProps) {
 
   useEffect(() => {
     if (!isHome) {
-      setActiveSection("upcoming");
+      if (location.pathname === "/about") {
+        setActiveSection("about");
+      } else if (location.pathname === "/upcoming") {
+        setActiveSection("upcoming");
+      } else {
+        setActiveSection("upcoming");
+      }
       return;
     }
 
@@ -51,7 +57,7 @@ export function NavBar({ onMenuToggle }: NavBarProps) {
     { id: "tales", label: "Tales", hash: "stories", to: "/" },
     { id: "upcoming", label: "Upcoming Trips", to: "/upcoming" },
     { id: "gallery", label: "Gallery", hash: "map", to: "/" },
-    { id: "about", label: "About", hash: "about", to: "/" },
+    { id: "about", label: "About", to: "/about" },
   ];
 
   return (
@@ -104,11 +110,11 @@ export function NavBar({ onMenuToggle }: NavBarProps) {
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
 
-            if (item.id === "upcoming") {
+            if (item.id === "upcoming" || item.id === "about") {
               return (
                 <Link
                   key={item.id}
-                  to="/upcoming"
+                  to={item.to}
                   className={`relative py-1 transition-colors duration-300 hover:text-white ${
                     isActive ? "text-white font-semibold" : "text-white/80"
                   }`}
@@ -206,7 +212,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     { id: "tales", label: "Tales", hash: "stories", to: "/" },
     { id: "upcoming", label: "Upcoming Trips", to: "/upcoming" },
     { id: "gallery", label: "Gallery", hash: "map", to: "/" },
-    { id: "about", label: "About", hash: "about", to: "/" },
+    { id: "about", label: "About", to: "/about" },
   ];
 
   return (
@@ -231,11 +237,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           <nav className="mt-8 flex flex-col gap-6 text-lg font-medium text-white/80">
             {menuItems.map((item) => {
-              if (item.id === "upcoming") {
+              if (item.id === "upcoming" || item.id === "about") {
                 return (
                   <Link
                     key={item.id}
-                    to="/upcoming"
+                    to={item.to}
                     onClick={onClose}
                     className="transition hover:text-gold flex items-center justify-between"
                   >
